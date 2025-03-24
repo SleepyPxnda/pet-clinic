@@ -19,7 +19,7 @@ jobs:
   
     - name: Compile, build and push
       run: |
-        mvn package
+        mvn packages
         docker build --tag ghcr.io/sleepypxnda/petclinic:latest -f Dockerfile .
         docker login --username sleepypxnda --password $GITHUB_ACCESSTOKEN ghcr.io
         docker push ghcr.io/sleepypxnda/petclinic:latest
