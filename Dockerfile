@@ -7,6 +7,6 @@ WORKDIR home
 
 COPY target/spring-petclinic*.jar .
 
-###ENTRYPOINT java -jar spring-petclinic*.jar
+###ENTRYPOINT java -jar spring-petclinic*.jar test
 
 CMD java -Xmx512m -Xms512m -jar spring-petclinic*.jar --server.port=${PORT}
